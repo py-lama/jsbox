@@ -1,0 +1,36 @@
+{
+  "name": "jsbox",
+  "version": "0.1.0",
+  "description": "JavaScript sandbox for safely executing code in isolated environments",
+  "main": "index.js",
+  "bin": {
+    "jsbox": "./bin/jsbox-cli.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "jsbox",
+    "sandbox",
+    "javascript",
+    "code-execution",
+    "security"
+  ],
+  "author": "Tom Sapletta <info@softreck.dev>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/py-lama/jsbox"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chalk": "^4.1.2",
+    "commander": "^9.4.0",
+    "dotenv": "^16.0.1",
+    "vm2": "^3.9.11"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
