@@ -37,6 +37,60 @@ If you find this project useful, please consider supporting it:
 - [PayPal](https://www.paypal.me/softreck/10.00)
 - [Donate via Softreck](https://donate.softreck.dev)
 
+## Installation
+
+```bash
+npm install jsbox
+```
+
+## Usage Example
+
+```js
+const JSBox = require('jsbox');
+
+const code = 'console.log("Hello from JSBox!");';
+JSBox.run(code); // Safely executes the code in a sandbox
+```
+
+## Testing
+
+To run tests for JSBox using the PyLama ecosystem:
+
+```bash
+cd ../../tests
+./run_all_tests.sh
+# or for a tolerant run
+./run_all_tests_tolerant.sh
+```
+
+Or, from the jsbox directory:
+
+```bash
+make test
+```
+
+## Project Management
+
+Common Makefile commands:
+
+- `make install` – Install dependencies
+- `make lint` – Lint code
+- `make test` – Run tests
+- `make build` – Build project
+- `make clean` – Clean build/deps
+- `make format` – Format code
+- `make start` – Start project (if supported)
+
+## Example: Creating a Safe JavaScript Sandbox
+
+```js
+const JSBox = require('jsbox');
+
+const userCode = '2 + 2';
+const result = JSBox.evaluate(userCode);
+console.log(result); // 4
+```
+
 ---
 
 JSBox is a JavaScript sandbox for safely executing code in isolated environments. It is part of the PyLama ecosystem and integrates with LogLama as the primary service for centralized logging and environment management.
