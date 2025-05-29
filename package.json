@@ -4,7 +4,7 @@
   "description": "JavaScript sandbox for safely executing code in isolated environments",
   "main": "index.js",
   "bin": {
-    "bexy": "./bin/bexy-cli.js"
+    "bexy": "bin/bexy-cli.js"
   },
   "scripts": {
     "test": "jest",
@@ -24,7 +24,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/py-lama/jsbexy"
+    "url": "git+https://github.com/py-lama/jsbexy.git"
   },
   "homepage": "https://github.com/py-lama/jsbexy#readme",
   "bugs": {
