@@ -1,6 +1,6 @@
 {
   "name": "bexy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JavaScript sandbox for safely executing code in isolated environments",
   "main": "index.js",
   "bin": {
