@@ -1,10 +1,16 @@
-# JSBox
+# Bexy (formerly JSBox)
+
+A secure JavaScript sandbox for safely executing untrusted code in isolated environments.
+
+[![npm version](https://img.shields.io/npm/v/bexy.svg)](https://www.npmjs.com/package/bexy)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)](https://nodejs.org/)
 
 ## PyLama Ecosystem Navigation
 
 | Project | Description | Links |
 |---------|-------------|-------|
-| **JSBox** | JavaScript sandbox for executing code | [GitHub](https://github.com/py-lama/jsbox) · [NPM](https://www.npmjs.com/package/jsbox) · [Docs](https://py-lama.github.io/jsbox/) |
+| **Bexy** | JavaScript sandbox for executing code | [GitHub](https://github.com/py-lama/jsbexy) · [NPM](https://www.npmjs.com/package/bexy) · [Docs](https://py-lama.github.io/jsbexy/) |
 | **GetLLM** | LLM model management and code generation | [GitHub](https://github.com/py-lama/getllm) · [PyPI](https://pypi.org/project/getllm/) · [Docs](https://py-lama.github.io/getllm/) |
 | **DevLama** | Python code generation with Ollama | [GitHub](https://github.com/py-lama/devlama) · [Docs](https://py-lama.github.io/devlama/) |
 | **LogLama** | Centralized logging and environment management | [GitHub](https://github.com/py-lama/loglama) · [PyPI](https://pypi.org/project/loglama/) · [Docs](https://py-lama.github.io/loglama/) |
@@ -40,17 +46,42 @@ If you find this project useful, please consider supporting it:
 ## Installation
 
 ```bash
-npm install jsbox
+npm install bexy
 ```
 
-## Usage Example
+## Quick Start
 
-```js
-const JSBox = require('jsbox');
+### Command Line Usage
 
-const code = 'console.log("Hello from JSBox!");';
-JSBox.run(code); // Safely executes the code in a sandbox
+```bash
+# Run a JavaScript file in the sandbox
+bexy run script.js
+
+# Start an interactive REPL in the sandbox
+bexy repl
+
+# Show version
+bexy --version
 ```
+
+### Programmatic Usage
+
+```javascript
+const { executeInSandbox } = require('bexy');
+
+// Execute code in a secure sandbox
+const result = await executeInSandbox('1 + 1');
+console.log(result); // 2
+```
+
+## Features
+
+- Secure code execution in isolated environments
+- Support for both synchronous and asynchronous code
+- Configurable resource limits (CPU, memory, execution time)
+- Built-in REPL for interactive development
+- Support for CommonJS and ES modules
+- TypeScript type definitions included
 
 ## Testing
 

@@ -1,27 +1,34 @@
 {
-  "name": "jsbox",
+  "name": "bexy",
   "version": "0.1.0",
   "description": "JavaScript sandbox for safely executing code in isolated environments",
   "main": "index.js",
   "bin": {
-    "jsbox": "./bin/jsbox-cli.js"
+    "bexy": "./bin/bexy-cli.js"
   },
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "echo 'No build step required'",
+    "prepublishOnly": "npm test"
   },
   "keywords": [
-    "jsbox",
+    "bexy",
     "sandbox",
     "javascript",
     "code-execution",
-    "security"
+    "security",
+    "jsbexy"
   ],
   "author": "Tom Sapletta <info@softreck.dev>",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/py-lama/jsbox"
+    "url": "https://github.com/py-lama/jsbexy"
+  },
+  "homepage": "https://github.com/py-lama/jsbexy#readme",
+  "bugs": {
+    "url": "https://github.com/py-lama/jsbexy/issues"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -36,5 +43,8 @@
     "express": "^5.1.0",
     "jest": "^28.1.3",
     "jsdom": "^26.1.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
